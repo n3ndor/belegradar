@@ -122,8 +122,8 @@ export const STRINGS: Record<Lang, Strings> = {
     footerEnginePrefix: "Extraktions-Engine:",
     footerEngineOnPypi: "auf PyPI",
     footerEngineSource: "Quellcode & Genauigkeits-Eval",
-    switchLabel: "English",
-    switchFlag: "🇬🇧",
+    switchLabel: "Read in English",
+    switchFlag: "🌐",
   },
   en: {
     tagline: "PDF invoice in, validated data out.",
@@ -189,7 +189,7 @@ export const STRINGS: Record<Lang, Strings> = {
     footerEnginePrefix: "Extraction engine:",
     footerEngineOnPypi: "on PyPI",
     footerEngineSource: "source & accuracy eval",
-    switchLabel: "Deutsch",
-    switchFlag: "🇩🇪",
+    switchLabel: "Auf Deutsch lesen",
+    switchFlag: "🌐",
   },
 };

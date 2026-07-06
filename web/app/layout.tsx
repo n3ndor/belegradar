@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     siteName: "BelegRadar",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "BelegRadar",
+    description:
+      "PDF invoice in, validated data out. VAT breakdown, IBAN checksum, §14 UStG. Nothing is stored.",
+  },
   robots: { index: true, follow: true },
 };
 
