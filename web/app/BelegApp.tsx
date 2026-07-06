@@ -3,6 +3,7 @@
 import { useCallback, useRef, useState } from "react";
 import ResultView from "./ResultView";
 import { SAMPLES } from "./samples";
+import { baseName, copyText, downloadFile, toCsv, toJson } from "./export";
 import type { ApiError, Result } from "./types";
 
 export default function BelegApp() {
@@ -11,7 +12,13 @@ export default function BelegApp() {
   const [error, setError] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
   const [fileName, setFileName] = useState<string | null>(null);
+  const [copied, setCopied] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const flashCopied = (which: string) => {
+    setCopied(which);
+    setTimeout(() => setCopied((c) => (c === which ? null : c)), 1600);
+  };
 
   const send = useCallback(async (bytes: ArrayBuffer, label: string) => {
     setLoading(label);
@@ -190,6 +197,48 @@ export default function BelegApp() {
             </h2>
             <span style={{ fontSize: 12, color: "var(--muted)" }}>{result.tokens} tokens</span>
           </div>
+
+          {/* Export bar */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 18 }}>
+            <button
+              style={exportBtn()}
+              onClick={async () => (await copyText(toJson(result))) && flashCopied("json")}
+            >
+              {copied === "json" ? "✓ Copied" : "Copy JSON"}
+            </button>
+            <button
+              style={exportBtn()}
+              onClick={() =>
+                downloadFile(
+                  `${baseName(result.extraction, fileName ?? "invoice")}.json`,
+                  toJson(result),
+                  "application/json",
+                )
+              }
+            >
+              Download .json
+            </button>
+            <button
+              style={exportBtn()}
+              onClick={async () => (await copyText(toCsv(result.extraction))) && flashCopied("csv")}
+            >
+              {copied === "csv" ? "✓ Copied" : "Copy CSV"}
+            </button>
+            <button
+              style={exportBtn()}
+              onClick={() =>
+                downloadFile(
+                  `${baseName(result.extraction, fileName ?? "invoice")}.csv`,
+                  toCsv(result.extraction),
+                  "text/csv;charset=utf-8",
+                  true,
+                )
+              }
+            >
+              Download .csv
+            </button>
+          </div>
+
           <ResultView result={result} ibanValid={ibanValid} />
         </div>
       )}
@@ -224,4 +273,17 @@ export default function BelegApp() {
 
 function link(): React.CSSProperties {
   return { color: "var(--accent)", textDecoration: "none" };
+}
+
+function exportBtn(): React.CSSProperties {
+  return {
+    fontSize: 13,
+    fontWeight: 500,
+    padding: "8px 14px",
+    borderRadius: 9,
+    border: "1px solid var(--border)",
+    background: "var(--surface)",
+    color: "var(--accent)",
+    cursor: "pointer",
+  };
 }
