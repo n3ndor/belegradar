@@ -314,8 +314,13 @@ def main() -> int:
         }
         pdf_path = OUT / f"{spec['id']}.pdf"
         render_pdf(spec, totals, pdf_path)
+        # newline="\n" keeps the ground truth LF on every platform, so the
+        # CI sync check (which regenerates on Ubuntu) matches a file
+        # generated on Windows.
         (OUT / f"{spec['id']}.json").write_text(
-            json.dumps(truth, indent=2, ensure_ascii=False), encoding="utf-8"
+            json.dumps(truth, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+            newline="\n",
         )
         print(f"wrote {pdf_path.name}")
     print(f"{len(INVOICES)} sample invoices generated")

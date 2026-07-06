@@ -1,0 +1,9 @@
+# Generated ground truth is always LF, regardless of the OS it was generated
+# on, so the CI regeneration check is stable across platforms.
+samples/*.json text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+
+# PDFs are binary; never apply EOL translation.
+*.pdf binary
