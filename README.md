@@ -50,18 +50,22 @@ CI fails if the committed gallery drifts from the generator.
 - [x] Milestone 1: extraction core: schema, validators, locale-aware number
       parsing, PDF text extraction with scan rejection, Groq extraction,
       eval suite with published per-field accuracy
-- [x] Milestone 2: `belegradar` published on PyPI; Next.js web app
-      (`web/`) with drag-and-drop, sample gallery, side-by-side result view,
-      confidence dots, VAT breakdown, and the Pflichtangaben checklist. The
-      live demo runs the published package via a Vercel Python function.
-- [ ] Milestone 3: deploy to beleg.nagysolution.com, OG image, LinkedIn launch
+- [x] Milestone 2: `belegradar` published on PyPI; Next.js web app live at
+      [beleg.nagysolution.com](https://beleg.nagysolution.com) with drag-and-drop,
+      sample gallery, side-by-side result view, confidence dots, VAT breakdown,
+      and the Pflichtangaben checklist. The live demo runs the published package
+      via a Vercel Python function. German/English UI (DE default). Export to
+      JSON and CSV (copy or download). The sample gallery is pre-extracted
+      (`results.json`), so demos cost zero tokens; only real uploads hit the LLM.
+- [ ] Milestone 3: OG image + LinkedIn/X launch posts
 
 ## Repository layout
 
 ```
 extractor/   the belegradar Python package (published to PyPI) + tests + evals + samples
 web/         Next.js frontend + api/extract.py (Vercel Python function) that
-             pip-installs belegradar; devserver.py runs the API locally
+             pip-installs belegradar; devserver.py runs the API locally;
+             gen_sample_results.py pre-computes the sample gallery results
 ```
 
 ## Honest constraints
