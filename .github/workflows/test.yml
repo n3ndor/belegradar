@@ -20,8 +20,24 @@ jobs:
       - name: Unit tests (no network, no LLM)
         working-directory: extractor
         run: pytest -q
-      - name: Samples regenerate deterministically
+      - name: Ground truth stays in sync with the generator
         working-directory: extractor
         run: |
           python samples/generate.py
-          git diff --exit-code samples/
+          # The JSON ground truth is what the eval scores against; it is pure
+          # Python and deterministic across platforms, so it must not drift.
+          # (PDF bytes are not diffed: reportlab output varies by version and
+          #  platform. Their text layer is validated in the next step.)
+          git diff --exit-code -- 'samples/*.json'
+      - name: Every sample PDF has an extractable text layer
+        working-directory: extractor
+        run: |
+          python -c "
+          from pathlib import Path
+          from belegradar.pdftext import extract_text
+          pdfs = sorted(Path('samples').glob('*.pdf'))
+          assert pdfs, 'no sample PDFs found'
+          for p in pdfs:
+              extract_text(p.read_bytes())  # raises if no text layer
+          print(f'{len(pdfs)} sample PDFs OK')
+          "
