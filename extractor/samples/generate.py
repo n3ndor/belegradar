@@ -251,7 +251,10 @@ def render_pdf(spec: dict, totals: dict, path: Path) -> None:
     fmt = de if lang == "de" else en
     labels = LABELS[lang]
     cur = totals["currency"]
-    c = Canvas(str(path), pagesize=A4)
+    # invariant=1 makes reportlab emit a fixed timestamp and document ID, so
+    # the same input produces byte-identical PDFs. Without it every run
+    # embeds a fresh /CreationDate and /ID, and the CI drift check fails.
+    c = Canvas(str(path), pagesize=A4, invariant=1)
     w, h = A4
     y = h - 60
 
