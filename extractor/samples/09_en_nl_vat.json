@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Windmill Digital B.V.",
+  "vendor_vat_id": "NL123456789B01",
+  "invoice_number": "INV-2026-0455",
+  "invoice_date": "2026-05-05",
+  "iban": "NL91ABNA0417164300",
+  "line_item_count": 2,
+  "net_total": "8000.00",
+  "vat_breakdown": [
+    {
+      "rate": "21",
+      "base": "8000.00",
+      "amount": "1680.00"
+    }
+  ],
+  "gross_total": "9680.00",
+  "currency": "EUR"
+}

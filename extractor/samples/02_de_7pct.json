@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Buchhandlung Lesezeit e.K.",
+  "vendor_vat_id": "DE813992525",
+  "invoice_number": "2026-1187",
+  "invoice_date": "2026-06-02",
+  "iban": "DE02120300000000202051",
+  "line_item_count": 2,
+  "net_total": "687.30",
+  "vat_breakdown": [
+    {
+      "rate": "7",
+      "base": "687.30",
+      "amount": "48.11"
+    }
+  ],
+  "gross_total": "735.41",
+  "currency": "EUR"
+}

@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Schreiner & Sohn GmbH",
+  "vendor_vat_id": "DE123456789",
+  "invoice_number": "RE-2026-0101",
+  "invoice_date": "2026-05-12",
+  "iban": "DE89370400440532013000",
+  "line_item_count": 2,
+  "net_total": "2920.00",
+  "vat_breakdown": [
+    {
+      "rate": "19",
+      "base": "2920.00",
+      "amount": "554.80"
+    }
+  ],
+  "gross_total": "3474.80",
+  "currency": "EUR"
+}

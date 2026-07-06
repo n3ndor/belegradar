@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Jonas Winter IT-Beratung",
+  "vendor_vat_id": "DE267352437",
+  "invoice_number": "JW-2026-18",
+  "invoice_date": "2026-06-30",
+  "iban": "DE02120300000000202051",
+  "line_item_count": 2,
+  "net_total": "6460.00",
+  "vat_breakdown": [
+    {
+      "rate": "19",
+      "base": "6460.00",
+      "amount": "1227.40"
+    }
+  ],
+  "gross_total": "7687.40",
+  "currency": "EUR"
+}

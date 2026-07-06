@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Beacon Legal Translations",
+  "vendor_vat_id": null,
+  "invoice_number": "BLT-0921",
+  "invoice_date": "2026-03-03",
+  "iban": null,
+  "line_item_count": 3,
+  "net_total": "1849.50",
+  "vat_breakdown": [
+    {
+      "rate": "21",
+      "base": "1849.50",
+      "amount": "388.40"
+    }
+  ],
+  "gross_total": "2237.90",
+  "currency": "EUR"
+}

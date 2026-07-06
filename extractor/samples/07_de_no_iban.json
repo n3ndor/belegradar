@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Nachhilfe Institut Klug",
+  "vendor_vat_id": "DE327556139",
+  "invoice_number": "NIK-2026-2201",
+  "invoice_date": "2026-05-30",
+  "iban": null,
+  "line_item_count": 1,
+  "net_total": "336.00",
+  "vat_breakdown": [
+    {
+      "rate": "19",
+      "base": "336.00",
+      "amount": "63.84"
+    }
+  ],
+  "gross_total": "399.84",
+  "currency": "EUR"
+}

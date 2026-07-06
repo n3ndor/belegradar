@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Stahlbau Krämer AG",
+  "vendor_vat_id": "DE812526315",
+  "invoice_number": "SBK-2026-0044",
+  "invoice_date": "2026-02-27",
+  "iban": "DE89370400440532013000",
+  "line_item_count": 3,
+  "net_total": "36910.00",
+  "vat_breakdown": [
+    {
+      "rate": "19",
+      "base": "36910.00",
+      "amount": "7012.90"
+    }
+  ],
+  "gross_total": "43922.90",
+  "currency": "EUR"
+}

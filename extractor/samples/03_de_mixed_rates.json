@@ -1,0 +1,23 @@
+{
+  "vendor_name": "Gasthaus zur Linde",
+  "vendor_vat_id": "DE297543867",
+  "invoice_number": "R-4471",
+  "invoice_date": "2026-04-28",
+  "iban": "DE89370400440532013000",
+  "line_item_count": 3,
+  "net_total": "1500.00",
+  "vat_breakdown": [
+    {
+      "rate": "7",
+      "base": "860.00",
+      "amount": "60.20"
+    },
+    {
+      "rate": "19",
+      "base": "640.00",
+      "amount": "121.60"
+    }
+  ],
+  "gross_total": "1681.80",
+  "currency": "EUR"
+}

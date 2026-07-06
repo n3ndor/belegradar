@@ -1,0 +1,18 @@
+{
+  "vendor_name": "BüroTech Handels GmbH",
+  "vendor_vat_id": "DE118645675",
+  "invoice_number": "GS26-00102",
+  "invoice_date": "2026-04-02",
+  "iban": "DE02120300000000202051",
+  "line_item_count": 1,
+  "net_total": "-289.00",
+  "vat_breakdown": [
+    {
+      "rate": "19",
+      "base": "-289.00",
+      "amount": "-54.91"
+    }
+  ],
+  "gross_total": "-343.91",
+  "currency": "EUR"
+}

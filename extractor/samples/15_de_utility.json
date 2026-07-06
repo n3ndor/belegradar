@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Stadtwerke Sonnenfeld GmbH",
+  "vendor_vat_id": "DE152847293",
+  "invoice_number": "SW-2026-448291",
+  "invoice_date": "2026-01-31",
+  "iban": "DE89370400440532013000",
+  "line_item_count": 2,
+  "net_total": "118.98",
+  "vat_breakdown": [
+    {
+      "rate": "19",
+      "base": "118.98",
+      "amount": "22.61"
+    }
+  ],
+  "gross_total": "141.59",
+  "currency": "EUR"
+}

@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Fjord Consulting ApS",
+  "vendor_vat_id": null,
+  "invoice_number": "FC-2026-210",
+  "invoice_date": "2026-05-22",
+  "iban": null,
+  "line_item_count": 2,
+  "net_total": "9860.00",
+  "vat_breakdown": [
+    {
+      "rate": "25",
+      "base": "9860.00",
+      "amount": "2465.00"
+    }
+  ],
+  "gross_total": "12325.00",
+  "currency": "EUR"
+}

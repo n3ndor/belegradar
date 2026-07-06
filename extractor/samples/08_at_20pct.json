@@ -1,0 +1,18 @@
+{
+  "vendor_name": "Alpenblick Software GmbH",
+  "vendor_vat_id": "ATU12345678",
+  "invoice_number": "A-2026-077",
+  "invoice_date": "2026-06-10",
+  "iban": "AT611904300234573201",
+  "line_item_count": 2,
+  "net_total": "2820.00",
+  "vat_breakdown": [
+    {
+      "rate": "20",
+      "base": "2820.00",
+      "amount": "564.00"
+    }
+  ],
+  "gross_total": "3384.00",
+  "currency": "EUR"
+}
