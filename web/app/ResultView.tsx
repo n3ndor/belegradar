@@ -1,22 +1,12 @@
 "use client";
 
+import type { Strings } from "./i18n";
 import type { Extraction, Flag, Result } from "./types";
 
 const CONF_COLOR: Record<string, string> = {
   high: "var(--ok)",
   medium: "var(--warn)",
   low: "var(--err)",
-};
-
-const PFLICHT_LABELS: Record<string, string> = {
-  vendor_name_address: "Name und Anschrift des Leistenden",
-  vat_id_or_tax_number: "USt-IdNr. oder Steuernummer",
-  invoice_date: "Rechnungsdatum",
-  invoice_number: "Fortlaufende Rechnungsnummer",
-  line_items: "Menge und Art der Leistung",
-  net_amount: "Nettobetrag (Entgelt)",
-  vat_rate_and_amount: "Steuersatz und Steuerbetrag",
-  gross_amount: "Bruttobetrag",
 };
 
 function Dot({ level }: { level?: string }) {
@@ -62,17 +52,23 @@ function money(v: string | null, currency: string): string {
   return `${v} ${currency}`;
 }
 
-export default function ResultView({ result, ibanValid }: { result: Result; ibanValid: boolean | null }) {
+export default function ResultView({
+  result,
+  ibanValid,
+  s,
+}: {
+  result: Result;
+  ibanValid: boolean | null;
+  s: Strings;
+}) {
   const e: Extraction = result.extraction;
   const c = e.confidence || {};
-  const errors = result.validation.flags.filter((f) => f.severity === "error");
-  const warns = result.validation.flags.filter((f) => f.severity === "warn");
 
   return (
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="result-grid">
       {/* LEFT: raw text */}
       <section style={card()}>
-        <h3 style={cardTitle()}>Raw PDF text</h3>
+        <h3 style={cardTitle()}>{s.rawText}</h3>
         <pre
           className="mono"
           style={{
@@ -93,27 +89,23 @@ export default function ResultView({ result, ibanValid }: { result: Result; iban
       {/* RIGHT: structured */}
       <section style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         <div style={card()}>
-          <h3 style={cardTitle()}>Extracted fields</h3>
-          <Field label="Vendor" value={e.vendor_name} conf={c.vendor_name} />
-          <Field label="Address" value={e.vendor_address} conf={c.vendor_address} />
+          <h3 style={cardTitle()}>{s.extractedFields}</h3>
+          <Field label={s.vendor} value={e.vendor_name} conf={c.vendor_name} />
+          <Field label={s.address} value={e.vendor_address} conf={c.vendor_address} />
+          <Field label={s.vatId} value={e.vendor_vat_id} conf={c.vendor_vat_id} />
+          <Field label={s.invoiceNo} value={e.invoice_number} conf={c.invoice_number} />
+          <Field label={s.invoiceDate} value={e.invoice_date} conf={c.invoice_date} />
+          <Field label={s.dueDate} value={e.due_date} conf={c.due_date} />
+          <Field label={s.customer} value={e.customer_name} conf={c.customer_name} />
           <Field
-            label="VAT ID"
-            value={e.vendor_vat_id}
-            conf={c.vendor_vat_id}
-          />
-          <Field label="Invoice no." value={e.invoice_number} conf={c.invoice_number} />
-          <Field label="Invoice date" value={e.invoice_date} conf={c.invoice_date} />
-          <Field label="Due date" value={e.due_date} conf={c.due_date} />
-          <Field label="Customer" value={e.customer_name} conf={c.customer_name} />
-          <Field
-            label="IBAN"
+            label={s.iban}
             value={
               e.iban ? (
                 <>
                   <span className="mono" style={{ fontSize: 13 }}>{e.iban}</span>
                   {ibanValid !== null && (
                     <span style={{ marginLeft: 8, color: ibanValid ? "var(--ok)" : "var(--err)", fontSize: 12 }}>
-                      {ibanValid ? "✓ checksum" : "✗ checksum"}
+                      {ibanValid ? s.checksumOk : s.checksumBad}
                     </span>
                   )}
                 </>
@@ -121,20 +113,19 @@ export default function ResultView({ result, ibanValid }: { result: Result; iban
             }
             conf={c.iban}
           />
-          <Field label="BIC" value={e.bic} conf={c.bic} />
+          <Field label={s.bic} value={e.bic} conf={c.bic} />
         </div>
 
-        {/* Line items */}
         {e.line_items.length > 0 && (
           <div style={card()}>
-            <h3 style={cardTitle()}>Line items</h3>
+            <h3 style={cardTitle()}>{s.lineItems}</h3>
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
               <thead>
                 <tr style={{ color: "var(--muted)", textAlign: "left" }}>
-                  <th style={th()}>Description</th>
-                  <th style={{ ...th(), textAlign: "right" }}>Qty</th>
-                  <th style={{ ...th(), textAlign: "right" }}>Unit</th>
-                  <th style={{ ...th(), textAlign: "right" }}>Total</th>
+                  <th style={th()}>{s.colDescription}</th>
+                  <th style={{ ...th(), textAlign: "right" }}>{s.colQty}</th>
+                  <th style={{ ...th(), textAlign: "right" }}>{s.colUnit}</th>
+                  <th style={{ ...th(), textAlign: "right" }}>{s.colTotal}</th>
                 </tr>
               </thead>
               <tbody>
@@ -151,16 +142,15 @@ export default function ResultView({ result, ibanValid }: { result: Result; iban
           </div>
         )}
 
-        {/* VAT + totals */}
         <div style={card()}>
-          <h3 style={cardTitle()}>MwSt-Aufschlüsselung & totals</h3>
+          <h3 style={cardTitle()}>{s.vatTotals}</h3>
           {e.vat_breakdown.length > 0 ? (
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, marginBottom: 10 }}>
               <thead>
                 <tr style={{ color: "var(--muted)", textAlign: "left" }}>
-                  <th style={th()}>Rate</th>
-                  <th style={{ ...th(), textAlign: "right" }}>Base</th>
-                  <th style={{ ...th(), textAlign: "right" }}>VAT</th>
+                  <th style={th()}>{s.colRate}</th>
+                  <th style={{ ...th(), textAlign: "right" }}>{s.colBase}</th>
+                  <th style={{ ...th(), textAlign: "right" }}>{s.colVat}</th>
                 </tr>
               </thead>
               <tbody>
@@ -174,13 +164,11 @@ export default function ResultView({ result, ibanValid }: { result: Result; iban
               </tbody>
             </table>
           ) : (
-            <p style={{ color: "var(--muted)", fontSize: 13, margin: "0 0 10px" }}>
-              No VAT stated (Kleinunternehmer or reverse charge).
-            </p>
+            <p style={{ color: "var(--muted)", fontSize: 13, margin: "0 0 10px" }}>{s.noVat}</p>
           )}
-          <Field label="Net total" value={money(e.net_total, e.currency)} conf={c.net_total} />
+          <Field label={s.netTotal} value={money(e.net_total, e.currency)} conf={c.net_total} />
           <div style={{ display: "flex", justifyContent: "space-between", paddingTop: 6, borderTop: "1px solid var(--border)" }}>
-            <span style={{ fontWeight: 600 }}>Gross total</span>
+            <span style={{ fontWeight: 600 }}>{s.grossTotal}</span>
             <span style={{ fontWeight: 700 }}>
               {money(e.gross_total, e.currency)}
               <Dot level={c.gross_total} />
@@ -188,11 +176,10 @@ export default function ResultView({ result, ibanValid }: { result: Result; iban
           </div>
         </div>
 
-        {/* Validation flags */}
         <div style={card()}>
-          <h3 style={cardTitle()}>Validation</h3>
-          {errors.length === 0 && warns.length === 0 && (
-            <p style={{ color: "var(--ok)", fontSize: 13, margin: 0 }}>✓ All checks passed.</p>
+          <h3 style={cardTitle()}>{s.validation}</h3>
+          {result.validation.flags.length === 0 && (
+            <p style={{ color: "var(--ok)", fontSize: 13, margin: 0 }}>{s.allPassed}</p>
           )}
           {result.validation.flags.map((f: Flag, i) => (
             <div
@@ -206,14 +193,13 @@ export default function ResultView({ result, ibanValid }: { result: Result; iban
                 color: f.severity === "error" ? "var(--err)" : "var(--warn)",
               }}
             >
-              <strong>{f.severity === "error" ? "Error" : "Check"}</strong> · {f.field}: {f.message}
+              <strong>{f.severity === "error" ? s.errorLabel : s.checkLabel}</strong> · {f.field}: {f.message}
             </div>
           ))}
         </div>
 
-        {/* Pflichtangaben */}
         <div style={card()}>
-          <h3 style={cardTitle()}>§14 UStG Pflichtangaben</h3>
+          <h3 style={cardTitle()}>{s.pflichtTitle}</h3>
           <div style={{ display: "grid", gap: 4 }}>
             {Object.entries(result.validation.pflichtangaben).map(([key, present]) => (
               <div key={key} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13 }}>
@@ -221,7 +207,7 @@ export default function ResultView({ result, ibanValid }: { result: Result; iban
                   {present ? "✓" : "✗"}
                 </span>
                 <span style={{ color: present ? "var(--ink)" : "var(--muted)" }}>
-                  {PFLICHT_LABELS[key] ?? key}
+                  {s.pflicht[key] ?? key}
                 </span>
               </div>
             ))}

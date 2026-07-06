@@ -1,0 +1,1184 @@
+{
+  "01_de_simple": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Schreiner & Sohn GmbH",
+      "vendor_address": "Handwerkerweg 12, 80331 München",
+      "vendor_vat_id": "DE123456789",
+      "invoice_number": "RE-2026-0101",
+      "invoice_date": "2026-05-12",
+      "due_date": "2026-06-11",
+      "customer_name": "Bergblick Hotel AG",
+      "line_items": [
+        {
+          "description": "Einbauschrank Eiche, Anfertigung",
+          "quantity": "1",
+          "unit_price": "2400.00",
+          "total": "2400.00"
+        },
+        {
+          "description": "Montage vor Ort",
+          "quantity": "8",
+          "unit_price": "65.00",
+          "total": "520.00"
+        }
+      ],
+      "net_total": "2920.00",
+      "vat_breakdown": [
+        {
+          "rate": "19",
+          "base": "2920.00",
+          "amount": "554.80"
+        }
+      ],
+      "gross_total": "3474.80",
+      "currency": "EUR",
+      "iban": "DE89370400440532013000",
+      "bic": "COBADEFFXXX",
+      "payment_terms": "Zahlbar innerhalb von 30 Tagen ohne Abzug.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "net_total": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Schreiner & Sohn GmbH\nHandwerkerweg 12, 80331 München\nUSt-IdNr. DE123456789\nRECHNUNG\nRechnungsnummer: RE-2026-0101\nRechnungsdatum: 12.05.2026\nFaellig bis: 11.06.2026\nRechnungsempfaenger: Bergblick Hotel AG\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nEinbauschrank Eiche, Anfertigung                               1      2.400,00      2.400,00\nMontage vor Ort                                                8         65,00        520,00\nNettobetrag: 2.920,00 EUR\nUSt 19% (2.920,00 EUR): 554,80 EUR\nRechnungsbetrag: 3.474,80 EUR\nIBAN: DE89370400440532013000   BIC: COBADEFFXXX\nZahlbar innerhalb von 30 Tagen ohne Abzug.",
+    "tokens": 1003
+  },
+  "02_de_7pct": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Buchhandlung Lesezeit e.K.",
+      "vendor_address": "Marktplatz 3, 04109 Leipzig",
+      "vendor_vat_id": "DE813992525",
+      "invoice_number": "2026-1187",
+      "invoice_date": "2026-06-02",
+      "due_date": null,
+      "customer_name": "Stadtbibliothek Leipzig",
+      "line_items": [
+        {
+          "description": "Fachbuch: Moderne Holzverbindungen",
+          "quantity": "12",
+          "unit_price": "34.90",
+          "total": "418.80"
+        },
+        {
+          "description": "Kinderbuch-Paket Fruehling",
+          "quantity": "3",
+          "unit_price": "89.50",
+          "total": "268.50"
+        }
+      ],
+      "net_total": "687.30",
+      "vat_breakdown": [
+        {
+          "rate": "7",
+          "base": "687.30",
+          "amount": "48.11"
+        }
+      ],
+      "gross_total": "735.41",
+      "currency": "EUR",
+      "iban": "DE02120300000000202051",
+      "bic": null,
+      "payment_terms": "Bereits per Lastschrift beglichen.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "customer_name": "high",
+        "net_total": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "low",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Buchhandlung Lesezeit e.K.\nMarktplatz 3, 04109 Leipzig\nUSt-IdNr. DE813992525\nRECHNUNG\nRechnungsnummer: 2026-1187\nRechnungsdatum: 02.06.2026\nRechnungsempfaenger: Stadtbibliothek Leipzig\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nFachbuch: Moderne Holzverbindungen                            12         34,90        418,80\nKinderbuch-Paket Fruehling                                     3         89,50        268,50\nNettobetrag: 687,30 EUR\nUSt 7% (687,30 EUR): 48,11 EUR\nRechnungsbetrag: 735,41 EUR\nIBAN: DE02120300000000202051\nBereits per Lastschrift beglichen.",
+    "tokens": 948
+  },
+  "03_de_mixed_rates": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Gasthaus zur Linde",
+      "vendor_address": "Lindenstr. 8, 79098 Freiburg",
+      "vendor_vat_id": "DE297543867",
+      "invoice_number": "R-4471",
+      "invoice_date": "2026-04-28",
+      "due_date": "2026-05-12",
+      "customer_name": "Weber Consulting GmbH",
+      "line_items": [
+        {
+          "description": "Catering Speisen (7% USt)",
+          "quantity": "1",
+          "unit_price": "860.00",
+          "total": "860.00"
+        },
+        {
+          "description": "Getraenke (19% USt)",
+          "quantity": "1",
+          "unit_price": "412.00",
+          "total": "412.00"
+        },
+        {
+          "description": "Servicepersonal 6 Std (19% USt)",
+          "quantity": "6",
+          "unit_price": "38.00",
+          "total": "228.00"
+        }
+      ],
+      "net_total": "1500.00",
+      "vat_breakdown": [
+        {
+          "rate": "7",
+          "base": "860.00",
+          "amount": "60.20"
+        },
+        {
+          "rate": "19",
+          "base": "640.00",
+          "amount": "121.60"
+        }
+      ],
+      "gross_total": "1681.80",
+      "currency": "EUR",
+      "iban": "DE89370400440532013000",
+      "bic": "GENODEF1S02",
+      "payment_terms": "Zahlbar sofort netto.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Gasthaus zur Linde\nLindenstr. 8, 79098 Freiburg\nUSt-IdNr. DE297543867\nRECHNUNG\nRechnungsnummer: R-4471\nRechnungsdatum: 28.04.2026\nFaellig bis: 12.05.2026\nRechnungsempfaenger: Weber Consulting GmbH\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nCatering Speisen (7% USt)                                      1        860,00        860,00\nGetraenke (19% USt)                                            1        412,00        412,00\nServicepersonal 6 Std (19% USt)                                6         38,00        228,00\nNettobetrag: 1.500,00 EUR\nUSt 7% (860,00 EUR): 60,20 EUR\nUSt 19% (640,00 EUR): 121,60 EUR\nRechnungsbetrag: 1.681,80 EUR\nIBAN: DE89370400440532013000   BIC: GENODEF1S02\nZahlbar sofort netto.",
+    "tokens": 1052
+  },
+  "04_de_discount": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "BüroTech Handels GmbH",
+      "vendor_address": "Industriering 44, 30179 Hannover",
+      "vendor_vat_id": "DE118645675",
+      "invoice_number": "RG26-00893",
+      "invoice_date": "2026-03-15",
+      "due_date": "2026-04-14",
+      "customer_name": "Kanzlei Dr. Sommer",
+      "line_items": [
+        {
+          "description": "Bürostuhl ErgoPlus",
+          "quantity": "4",
+          "unit_price": "289.00",
+          "total": "1156.00"
+        },
+        {
+          "description": "Schreibtisch elektrisch",
+          "quantity": "2",
+          "unit_price": "549.00",
+          "total": "1098.00"
+        },
+        {
+          "description": "Treuerabatt 5%",
+          "quantity": "1",
+          "unit_price": "-112.70",
+          "total": "-112.70"
+        }
+      ],
+      "net_total": "2141.30",
+      "vat_breakdown": [
+        {
+          "rate": "19",
+          "base": "2141.30",
+          "amount": "406.85"
+        }
+      ],
+      "gross_total": "2548.15",
+      "currency": "EUR",
+      "iban": "DE02120300000000202051",
+      "bic": "NOLADE2HXXX",
+      "payment_terms": "30 Tage netto, 2% Skonto bei Zahlung in 10 Tagen",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "BüroTech Handels GmbH\nIndustriering 44, 30179 Hannover\nUSt-IdNr. DE118645675\nRECHNUNG\nRechnungsnummer: RG26-00893\nRechnungsdatum: 15.03.2026\nFaellig bis: 14.04.2026\nRechnungsempfaenger: Kanzlei Dr. Sommer\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nBürostuhl ErgoPlus                                             4        289,00      1.156,00\nSchreibtisch elektrisch                                        2        549,00      1.098,00\nTreuerabatt 5%                                                 1       -112,70       -112,70\nNettobetrag: 2.141,30 EUR\nUSt 19% (2.141,30 EUR): 406,85 EUR\nRechnungsbetrag: 2.548,15 EUR\nIBAN: DE02120300000000202051   BIC: NOLADE2HXXX\n30 Tage netto, 2% Skonto bei Zahlung in 10 Tagen.",
+    "tokens": 1025
+  },
+  "05_de_kleinunternehmer": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Fotografie Anna Bergmann",
+      "vendor_address": "Am Muehlbach 2, 87561 Oberstdorf",
+      "vendor_vat_id": null,
+      "invoice_number": "2026-031",
+      "invoice_date": "2026-06-20",
+      "due_date": "2026-07-04",
+      "customer_name": "Alpenverein Sektion Allgäu",
+      "line_items": [
+        {
+          "description": "Vereinsfest Fotoreportage",
+          "quantity": "1",
+          "unit_price": "480.00",
+          "total": "480.00"
+        },
+        {
+          "description": "Bildbearbeitung 40 Fotos",
+          "quantity": "40",
+          "unit_price": "3.50",
+          "total": "140.00"
+        }
+      ],
+      "net_total": "620.00",
+      "vat_breakdown": [],
+      "gross_total": "620.00",
+      "currency": "EUR",
+      "iban": "DE89370400440532013000",
+      "bic": null,
+      "payment_terms": null,
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "low",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "net_total": "high",
+        "vat_breakdown": "low",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "low",
+        "payment_terms": "low"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [
+        {
+          "field": "vat_id_or_tax_number",
+          "severity": "warn",
+          "message": "Pflichtangabe missing: vat_id_or_tax_number"
+        },
+        {
+          "field": "vat_rate_and_amount",
+          "severity": "warn",
+          "message": "Pflichtangabe missing: vat_rate_and_amount"
+        }
+      ],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": false,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": false,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Fotografie Anna Bergmann\nAm Muehlbach 2, 87561 Oberstdorf\nRECHNUNG\nRechnungsnummer: 2026-031\nRechnungsdatum: 20.06.2026\nFaellig bis: 04.07.2026\nRechnungsempfaenger: Alpenverein Sektion Allgäu\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nVereinsfest Fotoreportage                                      1        480,00        480,00\nBildbearbeitung 40 Fotos                                      40          3,50        140,00\nNettobetrag: 620,00 EUR\nRechnungsbetrag: 620,00 EUR\nIBAN: DE89370400440532013000\nGemäß §19 UStG wird keine Umsatzsteuer berechnet.",
+    "tokens": 888
+  },
+  "06_de_gutschrift": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "BüroTech Handels GmbH",
+      "vendor_address": "Industriering 44, 30179 Hannover",
+      "vendor_vat_id": "DE118645675",
+      "invoice_number": "GS26-00102",
+      "invoice_date": "2026-04-02",
+      "due_date": null,
+      "customer_name": "Kanzlei Dr. Sommer",
+      "line_items": [
+        {
+          "description": "Gutschrift: Retoure Bürostuhl ErgoPlus",
+          "quantity": "1",
+          "unit_price": "-289.00",
+          "total": "-289.00"
+        }
+      ],
+      "net_total": "-289.00",
+      "vat_breakdown": [
+        {
+          "rate": "19",
+          "base": "-289.00",
+          "amount": "-54.91"
+        }
+      ],
+      "gross_total": "-343.91",
+      "currency": "EUR",
+      "iban": "DE02120300000000202051",
+      "bic": "NOLADE2HXXX",
+      "payment_terms": "Gutschrift, wird mit der naechsten Rechnung verrechnet.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "BüroTech Handels GmbH\nIndustriering 44, 30179 Hannover\nUSt-IdNr. DE118645675\nGUTSCHRIFT\nRechnungsnummer: GS26-00102\nRechnungsdatum: 02.04.2026\nRechnungsempfaenger: Kanzlei Dr. Sommer\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nGutschrift: Retoure Bürostuhl ErgoPlus                         1       -289,00       -289,00\nNettobetrag: -289,00 EUR\nUSt 19% (-289,00 EUR): -54,91 EUR\nRechnungsbetrag: -343,91 EUR\nIBAN: DE02120300000000202051   BIC: NOLADE2HXXX\nGutschrift, wird mit der naechsten Rechnung verrechnet.",
+    "tokens": 859
+  },
+  "07_de_no_iban": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Nachhilfe Institut Klug",
+      "vendor_address": "Schulstr. 19, 50667 Köln",
+      "vendor_vat_id": "DE327556139",
+      "invoice_number": "NIK-2026-2201",
+      "invoice_date": "2026-05-30",
+      "due_date": "2026-06-13",
+      "customer_name": "Familie Öztürk",
+      "line_items": [
+        {
+          "description": "Mathematik Nachhilfe Mai (8 Einheiten)",
+          "quantity": "8",
+          "unit_price": "42.00",
+          "total": "336.00"
+        }
+      ],
+      "net_total": "336.00",
+      "vat_breakdown": [
+        {
+          "rate": "19",
+          "base": "336.00",
+          "amount": "63.84"
+        }
+      ],
+      "gross_total": "399.84",
+      "currency": "EUR",
+      "iban": null,
+      "bic": null,
+      "payment_terms": "Betrag wird per SEPA-Lastschrift eingezogen.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "low",
+        "bic": "low",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Nachhilfe Institut Klug\nSchulstr. 19, 50667 Köln\nUSt-IdNr. DE327556139\nRECHNUNG\nRechnungsnummer: NIK-2026-2201\nRechnungsdatum: 30.05.2026\nFaellig bis: 13.06.2026\nRechnungsempfaenger: Familie Öztürk\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nMathematik Nachhilfe Mai (8 Einheiten)                         8         42,00        336,00\nNettobetrag: 336,00 EUR\nUSt 19% (336,00 EUR): 63,84 EUR\nRechnungsbetrag: 399,84 EUR\nBetrag wird per SEPA-Lastschrift eingezogen.",
+    "tokens": 839
+  },
+  "08_at_20pct": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Alpenblick Software GmbH",
+      "vendor_address": "Getreidegasse 31, 5020 Salzburg, Österreich",
+      "vendor_vat_id": "ATU12345678",
+      "invoice_number": "A-2026-077",
+      "invoice_date": "2026-06-10",
+      "due_date": "2026-07-10",
+      "customer_name": "Bergbahnen Kitzbühel AG",
+      "line_items": [
+        {
+          "description": "Wartungsvertrag Q2/2026",
+          "quantity": "1",
+          "unit_price": "1500.00",
+          "total": "1500.00"
+        },
+        {
+          "description": "Zusatzentwicklung Schnittstellen",
+          "quantity": "12",
+          "unit_price": "110.00",
+          "total": "1320.00"
+        }
+      ],
+      "net_total": "2820.00",
+      "vat_breakdown": [
+        {
+          "rate": "20",
+          "base": "2820.00",
+          "amount": "564.00"
+        }
+      ],
+      "gross_total": "3384.00",
+      "currency": "EUR",
+      "iban": "AT611904300234573201",
+      "bic": "SPSBAT21XXX",
+      "payment_terms": "Zahlbar binnen 30 Tagen.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Alpenblick Software GmbH\nGetreidegasse 31, 5020 Salzburg, Österreich\nUSt-IdNr. ATU12345678\nRECHNUNG\nRechnungsnummer: A-2026-077\nRechnungsdatum: 10.06.2026\nFaellig bis: 10.07.2026\nRechnungsempfaenger: Bergbahnen Kitzbühel AG\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nWartungsvertrag Q2/2026                                        1      1.500,00      1.500,00\nZusatzentwicklung Schnittstellen                              12        110,00      1.320,00\nNettobetrag: 2.820,00 EUR\nUSt 20% (2.820,00 EUR): 564,00 EUR\nRechnungsbetrag: 3.384,00 EUR\nIBAN: AT611904300234573201   BIC: SPSBAT21XXX\nZahlbar binnen 30 Tagen.",
+    "tokens": 967
+  },
+  "09_en_nl_vat": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Windmill Digital B.V.",
+      "vendor_address": "Keizersgracht 120, 1015 CX Amsterdam, Netherlands",
+      "vendor_vat_id": "NL123456789B01",
+      "invoice_number": "INV-2026-0455",
+      "invoice_date": "2026-05-05",
+      "due_date": "2026-06-04",
+      "customer_name": "Nordwind Logistics GmbH",
+      "line_items": [
+        {
+          "description": "UX design sprint (2 weeks)",
+          "quantity": "1",
+          "unit_price": "6800.00",
+          "total": "6800.00"
+        },
+        {
+          "description": "Design system documentation",
+          "quantity": "1",
+          "unit_price": "1200.00",
+          "total": "1200.00"
+        }
+      ],
+      "net_total": "8000.00",
+      "vat_breakdown": [
+        {
+          "rate": "21",
+          "base": "8000.00",
+          "amount": "1680.00"
+        }
+      ],
+      "gross_total": "9680.00",
+      "currency": "EUR",
+      "iban": "NL91ABNA0417164300",
+      "bic": "ABNANL2A",
+      "payment_terms": "Payment due within 30 days of invoice date",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Windmill Digital B.V.\nKeizersgracht 120, 1015 CX Amsterdam, Netherlands\nVAT ID NL123456789B01\nINVOICE\nInvoice number: INV-2026-0455\nInvoice date: May 05, 2026\nDue date: June 04, 2026\nBill to: Nordwind Logistics GmbH\nDescription                                                  Qty    Unit price        Amount\nUX design sprint (2 weeks)                                     1      6,800.00      6,800.00\nDesign system documentation                                    1      1,200.00      1,200.00\nSubtotal: 8,000.00 EUR\nVAT 21% (8,000.00 EUR): 1,680.00 EUR\nTotal due: 9,680.00 EUR\nIBAN: NL91ABNA0417164300   BIC: ABNANL2A\nPayment due within 30 days of invoice date.",
+    "tokens": 920
+  },
+  "10_en_uk": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Thames Analytics Ltd",
+      "vendor_address": "14 Clerkenwell Green, London EC1R 0DP, United Kingdom",
+      "vendor_vat_id": "GB123456789",
+      "invoice_number": "TA-1187",
+      "invoice_date": "2026-04-18",
+      "due_date": "2026-05-02",
+      "customer_name": "Continental Retail SE",
+      "line_items": [
+        {
+          "description": "Market analysis report",
+          "quantity": "1",
+          "unit_price": "3450.00",
+          "total": "3450.00"
+        },
+        {
+          "description": "Stakeholder workshop",
+          "quantity": "2",
+          "unit_price": "780.00",
+          "total": "1560.00"
+        }
+      ],
+      "net_total": "5010.00",
+      "vat_breakdown": [
+        {
+          "rate": "20",
+          "base": "5010.00",
+          "amount": "1002.00"
+        }
+      ],
+      "gross_total": "6012.00",
+      "currency": "EUR",
+      "iban": "GB29NWBK60161331926819",
+      "bic": "NWBKGB2L",
+      "payment_terms": "Net 14 days. Late payments subject to statutory interest.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Thames Analytics Ltd\n14 Clerkenwell Green, London EC1R 0DP, United Kingdom\nVAT ID GB123456789\nINVOICE\nInvoice number: TA-1187\nInvoice date: April 18, 2026\nDue date: May 02, 2026\nBill to: Continental Retail SE\nDescription                                                  Qty    Unit price        Amount\nMarket analysis report                                         1      3,450.00      3,450.00\nStakeholder workshop                                           2        780.00      1,560.00\nSubtotal: 5,010.00 EUR\nVAT 20% (5,010.00 EUR): 1,002.00 EUR\nTotal due: 6,012.00 EUR\nIBAN: GB29NWBK60161331926819   BIC: NWBKGB2L\nNet 14 days. Late payments subject to statutory interest.",
+    "tokens": 908
+  },
+  "11_en_usd_novat": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Prairie Cloud Services LLC",
+      "vendor_address": "2201 Ranch Road, Austin, TX 78701, USA",
+      "vendor_vat_id": null,
+      "invoice_number": "PCS-26-3302",
+      "invoice_date": "2026-06-01",
+      "due_date": "2026-06-15",
+      "customer_name": "Datenwerk Berlin GmbH",
+      "line_items": [
+        {
+          "description": "Managed hosting June 2026",
+          "quantity": "1",
+          "unit_price": "890.00",
+          "total": "890.00"
+        },
+        {
+          "description": "Priority support add-on",
+          "quantity": "1",
+          "unit_price": "150.00",
+          "total": "150.00"
+        }
+      ],
+      "net_total": "1040.00",
+      "vat_breakdown": [],
+      "gross_total": "1040.00",
+      "currency": "USD",
+      "iban": null,
+      "bic": null,
+      "payment_terms": "Pay by card or ACH",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "low",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "low",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "low",
+        "bic": "low",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [
+        {
+          "field": "vat_id_or_tax_number",
+          "severity": "warn",
+          "message": "Pflichtangabe missing: vat_id_or_tax_number"
+        },
+        {
+          "field": "vat_rate_and_amount",
+          "severity": "warn",
+          "message": "Pflichtangabe missing: vat_rate_and_amount"
+        }
+      ],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": false,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": false,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Prairie Cloud Services LLC\n2201 Ranch Road, Austin, TX 78701, USA\nINVOICE\nInvoice number: PCS-26-3302\nInvoice date: June 01, 2026\nDue date: June 15, 2026\nBill to: Datenwerk Berlin GmbH\nDescription                                                  Qty    Unit price        Amount\nManaged hosting June 2026                                      1        890.00        890.00\nPriority support add-on                                        1        150.00        150.00\nSubtotal: 1,040.00 USD\nTotal due: 1,040.00 USD\nReverse charge: VAT to be accounted for by the recipient. Pay by card or ACH.",
+    "tokens": 825
+  },
+  "12_de_thousands": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Stahlbau Krämer AG",
+      "vendor_address": "Hüttenweg 7, 47119 Duisburg",
+      "vendor_vat_id": "DE812526315",
+      "invoice_number": "SBK-2026-0044",
+      "invoice_date": "2026-02-27",
+      "due_date": "2026-03-29",
+      "customer_name": "Hafen Logistik Duisburg GmbH",
+      "line_items": [
+        {
+          "description": "Stahltraeger HEB 300, Position A",
+          "quantity": "24",
+          "unit_price": "1240.00",
+          "total": "29760.00"
+        },
+        {
+          "description": "Statik-Nachweis",
+          "quantity": "1",
+          "unit_price": "4850.00",
+          "total": "4850.00"
+        },
+        {
+          "description": "Lieferung und Kranstellung",
+          "quantity": "1",
+          "unit_price": "2300.00",
+          "total": "2300.00"
+        }
+      ],
+      "net_total": "36910.00",
+      "vat_breakdown": [
+        {
+          "rate": "19",
+          "base": "36910.00",
+          "amount": "7012.90"
+        }
+      ],
+      "gross_total": "43922.90",
+      "currency": "EUR",
+      "iban": "DE89370400440532013000",
+      "bic": "COBADEFFXXX",
+      "payment_terms": "50% Anzahlung erhalten, Rest 30 Tage netto.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Stahlbau Krämer AG\nHüttenweg 7, 47119 Duisburg\nUSt-IdNr. DE812526315\nRECHNUNG\nRechnungsnummer: SBK-2026-0044\nRechnungsdatum: 27.02.2026\nFaellig bis: 29.03.2026\nRechnungsempfaenger: Hafen Logistik Duisburg GmbH\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nStahltraeger HEB 300, Position A                              24      1.240,00     29.760,00\nStatik-Nachweis                                                1      4.850,00      4.850,00\nLieferung und Kranstellung                                     1      2.300,00      2.300,00\nNettobetrag: 36.910,00 EUR\nUSt 19% (36.910,00 EUR): 7.012,90 EUR\nRechnungsbetrag: 43.922,90 EUR\nIBAN: DE89370400440532013000   BIC: COBADEFFXXX\nZahlung: 50% Anzahlung erhalten, Rest 30 Tage netto.",
+    "tokens": 1053
+  },
+  "13_de_freelancer": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Jonas Winter IT-Beratung",
+      "vendor_address": "Fichtestr. 5, 10967 Berlin",
+      "vendor_vat_id": "DE267352437",
+      "invoice_number": "JW-2026-18",
+      "invoice_date": "2026-06-30",
+      "due_date": "2026-07-14",
+      "customer_name": "HealthTech Rhein GmbH",
+      "line_items": [
+        {
+          "description": "Backend-Entwicklung Juni (Stundensatz 95 EUR)",
+          "quantity": "62",
+          "unit_price": "95.00",
+          "total": "5890.00"
+        },
+        {
+          "description": "Code-Review Sprint 14",
+          "quantity": "6",
+          "unit_price": "95.00",
+          "total": "570.00"
+        }
+      ],
+      "net_total": "6460.00",
+      "vat_breakdown": [
+        {
+          "rate": "19",
+          "base": "6460.00",
+          "amount": "1227.40"
+        }
+      ],
+      "gross_total": "7687.40",
+      "currency": "EUR",
+      "iban": "DE02120300000000202051",
+      "bic": "BYLADEM1001",
+      "payment_terms": "Zahlbar innerhalb 14 Tagen ohne Abzug",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Jonas Winter IT-Beratung\nFichtestr. 5, 10967 Berlin\nUSt-IdNr. DE267352437\nRECHNUNG\nRechnungsnummer: JW-2026-18\nRechnungsdatum: 30.06.2026\nFaellig bis: 14.07.2026\nRechnungsempfaenger: HealthTech Rhein GmbH\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nBackend-Entwicklung Juni (Stundensatz 95 EUR)                 62         95,00      5.890,00\nCode-Review Sprint 14                                          6         95,00        570,00\nNettobetrag: 6.460,00 EUR\nUSt 19% (6.460,00 EUR): 1.227,40 EUR\nRechnungsbetrag: 7.687,40 EUR\nIBAN: DE02120300000000202051   BIC: BYLADEM1001\nZahlbar innerhalb 14 Tagen ohne Abzug.",
+    "tokens": 962
+  },
+  "14_en_fractions": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Beacon Legal Translations",
+      "vendor_address": "Rue du Commerce 9, 1000 Brussels, Belgium",
+      "vendor_vat_id": null,
+      "invoice_number": "BLT-0921",
+      "invoice_date": "2026-03-03",
+      "due_date": "2026-03-17",
+      "customer_name": "Van Der Berg Advocaten",
+      "line_items": [
+        {
+          "description": "Contract translation DE->EN (0.14 EUR/word, 8,450 words)",
+          "quantity": "1",
+          "unit_price": "1183.00",
+          "total": "1183.00"
+        },
+        {
+          "description": "Certified copies",
+          "quantity": "3",
+          "unit_price": "25.00",
+          "total": "75.00"
+        },
+        {
+          "description": "Express surcharge 50%",
+          "quantity": "0.5",
+          "unit_price": "1183.00",
+          "total": "591.50"
+        }
+      ],
+      "net_total": "1849.50",
+      "vat_breakdown": [
+        {
+          "rate": "21",
+          "base": "1849.50",
+          "amount": "388.40"
+        }
+      ],
+      "gross_total": "2237.90",
+      "currency": "EUR",
+      "iban": null,
+      "bic": null,
+      "payment_terms": "Wire transfer within 14 days. Reference the invoice number.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "low",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "low",
+        "bic": "low",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [
+        {
+          "field": "vat_id_or_tax_number",
+          "severity": "warn",
+          "message": "Pflichtangabe missing: vat_id_or_tax_number"
+        }
+      ],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": false,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Beacon Legal Translations\nRue du Commerce 9, 1000 Brussels, Belgium\nINVOICE\nInvoice number: BLT-0921\nInvoice date: March 03, 2026\nDue date: March 17, 2026\nBill to: Van Der Berg Advocaten\nDescription                                                  Qty    Unit price        Amount\nContract translation DE->EN (0.14 EUR/word, 8,450 words)       1      1,183.00      1,183.00\nCertified copies                                               3         25.00         75.00\nExpress surcharge 50%                                        0.5      1,183.00        591.50\nSubtotal: 1,849.50 EUR\nVAT 21% (1,849.50 EUR): 388.40 EUR\nTotal due: 2,237.90 EUR\nWire transfer within 14 days. Reference the invoice number.",
+    "tokens": 948
+  },
+  "15_de_utility": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Stadtwerke Sonnenfeld GmbH",
+      "vendor_address": "Energieallee 1, 34117 Kassel",
+      "vendor_vat_id": "DE152847293",
+      "invoice_number": "SW-2026-448291",
+      "invoice_date": "2026-01-31",
+      "due_date": "2026-02-14",
+      "customer_name": "Herr Martin Vogel",
+      "line_items": [
+        {
+          "description": "Stromverbrauch 12/2025 (312 kWh)",
+          "quantity": "312",
+          "unit_price": "0.34",
+          "total": "106.08"
+        },
+        {
+          "description": "Grundpreis Dezember",
+          "quantity": "1",
+          "unit_price": "12.90",
+          "total": "12.90"
+        }
+      ],
+      "net_total": "118.98",
+      "vat_breakdown": [
+        {
+          "rate": "19",
+          "base": "118.98",
+          "amount": "22.61"
+        }
+      ],
+      "gross_total": "141.59",
+      "currency": "EUR",
+      "iban": "DE89370400440532013000",
+      "bic": "HELADEF1KAS",
+      "payment_terms": "Der Betrag wird am 14.02.2026 abgebucht.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "high",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "net_total": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "high",
+        "bic": "high",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": true,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Stadtwerke Sonnenfeld GmbH\nEnergieallee 1, 34117 Kassel\nUSt-IdNr. DE152847293\nRECHNUNG\nRechnungsnummer: SW-2026-448291\nRechnungsdatum: 31.01.2026\nFaellig bis: 14.02.2026\nRechnungsempfaenger: Herr Martin Vogel\nPos. Beschreibung                                          Menge   Einzelpreis        Gesamt\nStromverbrauch 12/2025 (312 kWh)                             312          0,34        106,08\nGrundpreis Dezember                                            1         12,90         12,90\nNettobetrag: 118,98 EUR\nUSt 19% (118,98 EUR): 22,61 EUR\nRechnungsbetrag: 141,59 EUR\nIBAN: DE89370400440532013000   BIC: HELADEF1KAS\nDer Betrag wird am 14.02.2026 abgebucht.",
+    "tokens": 1000
+  },
+  "16_en_mixed": {
+    "ok": true,
+    "extraction": {
+      "vendor_name": "Fjord Consulting ApS",
+      "vendor_address": "Nyhavn 17, 1051 Copenhagen, Denmark",
+      "vendor_vat_id": null,
+      "invoice_number": "FC-2026-210",
+      "invoice_date": "2026-05-22",
+      "due_date": "2026-06-21",
+      "customer_name": "Hansa Maritime GmbH",
+      "line_items": [
+        {
+          "description": "Strategy engagement May (services)",
+          "quantity": "1",
+          "unit_price": "9500.00",
+          "total": "9500.00"
+        },
+        {
+          "description": "Printed report copies (goods)",
+          "quantity": "20",
+          "unit_price": "18.00",
+          "total": "360.00"
+        }
+      ],
+      "net_total": "9860.00",
+      "vat_breakdown": [
+        {
+          "rate": "25",
+          "base": "9860.00",
+          "amount": "2465.00"
+        }
+      ],
+      "gross_total": "12325.00",
+      "currency": "EUR",
+      "iban": null,
+      "bic": null,
+      "payment_terms": "Payment within 30 days to the account stated in the contract.",
+      "confidence": {
+        "vendor_name": "high",
+        "vendor_address": "high",
+        "vendor_vat_id": "low",
+        "invoice_number": "high",
+        "invoice_date": "high",
+        "due_date": "high",
+        "customer_name": "high",
+        "line_items": "high",
+        "net_total": "high",
+        "vat_breakdown": "high",
+        "gross_total": "high",
+        "currency": "high",
+        "iban": "low",
+        "bic": "low",
+        "payment_terms": "high"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "flags": [
+        {
+          "field": "vat_id_or_tax_number",
+          "severity": "warn",
+          "message": "Pflichtangabe missing: vat_id_or_tax_number"
+        }
+      ],
+      "pflichtangaben": {
+        "vendor_name_address": true,
+        "vat_id_or_tax_number": false,
+        "invoice_date": true,
+        "invoice_number": true,
+        "line_items": true,
+        "net_amount": true,
+        "vat_rate_and_amount": true,
+        "gross_amount": true
+      }
+    },
+    "raw_text": "Fjord Consulting ApS\nNyhavn 17, 1051 Copenhagen, Denmark\nINVOICE\nInvoice number: FC-2026-210\nInvoice date: May 22, 2026\nDue date: June 21, 2026\nBill to: Hansa Maritime GmbH\nDescription                                                  Qty    Unit price        Amount\nStrategy engagement May (services)                             1      9,500.00      9,500.00\nPrinted report copies (goods)                                 20         18.00        360.00\nSubtotal: 9,860.00 EUR\nVAT 25% (9,860.00 EUR): 2,465.00 EUR\nTotal due: 12,325.00 EUR\nPayment within 30 days to the account stated in the contract.",
+    "tokens": 866
+  }
+}
